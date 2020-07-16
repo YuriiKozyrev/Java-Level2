@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lesson_6.client.Controller">
+
+    <HBox fx:id="upperPanel">
+        <TextField fx:id="loginField" promptText="Логин" HBox.hgrow="ALWAYS" />
+        <PasswordField fx:id="passwordField" onAction="#tryToAuth" promptText="Пароль" />
+        <Button onAction="#tryToAuth" text="Авторизоваться" />
+    </HBox>
+
+    <HBox VBox.vgrow="ALWAYS">
+        <VBox HBox.hgrow="ALWAYS">
+
+            <ListView fx:id="textAreaListView"  VBox.vgrow="ALWAYS" />
+
+            <HBox fx:id="bottomPanel" managed="false" visible="false">
+                <TextField fx:id="textField" onAction="#sendMsg" promptText="Введите текст" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btn1" onAction="#sendMsg" text="Send" />
+            </HBox>
+        </VBox>
+        <ListView fx:id="clientList" managed="false" visible="false" maxWidth="70" />
+    </HBox>
+
+</VBox>
